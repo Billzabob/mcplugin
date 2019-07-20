@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion     := "2.13.0"
+ThisBuild / scalaVersion     := "2.12.8"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
@@ -28,6 +28,11 @@ Bukkit / pluginPrefix := "ProofpointersPlugin"
 
 // Does your plugin use a database
 Bukkit / pluginDatabase := false
+
+Bukkit / pluginCommands += { /hello }
+  .alias(/hi, /hey)
+  .description("Just saying hey.")
+  .usage("/hello")
 
 // Commands registered by your plugin
 // Bukkit / pluginCommands += { /gm }
