@@ -1,4 +1,4 @@
-#Our Super Cool Minecraft Plugin
+# Our Super Cool Minecraft Plugin
 
 1. [Install sbt](https://www.scala-sbt.org/)
 2. `git clone https://github.com/aki-ks/sbt-bukkit/wiki/Start-Bukkit-Server`
