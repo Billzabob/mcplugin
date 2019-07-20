@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion     := "2.13.0"
+ThisBuild / scalaVersion     := "2.12.8"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
@@ -37,6 +37,10 @@ Bukkit / pluginDatabase := false
 //   .description("Change your gamemode")
 //   .usage("/gm [c|creative|s|survival]")
 //   .permission("example.gamemode" ! "You're not allowed to change your gamemode")
+Bukkit / pluginCommands += { /hello }
+  .alias(/hi, /hey)
+  .description("Just saying hey.")
+  .usage("/hello")
 
 // Permissions the plugin wishes to register
 // Bukkit / pluginPermissions += { "example.gamemode" }
