@@ -1,0 +1,1 @@
+addSbtPlugin("me.aki.sbt" % "sbt-bukkit" % "latest.any")
