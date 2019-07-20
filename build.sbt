@@ -7,8 +7,6 @@ lazy val root = (project in file("."))
   .enablePlugins(BukkitPlugin)
   .settings(
     name := "spigot"
-    // You'll need to install the spigot jar to run the server through sbt. See here: https://github.com/aki-ks/sbt-bukkit/wiki/Start-Bukkit-Server
-    // spigotJar := "/home/user/Downloads/spigot-1.14.4.jar"
   )
 
 Bukkit / serverVersion := "1.14.4-R0.1-SNAPSHOT"
