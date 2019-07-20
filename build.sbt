@@ -6,13 +6,13 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .enablePlugins(BukkitPlugin)
   .settings(
-    name := "spigot",
-    serverVersion := "1.14.4-R0.1-SNAPSHOT",
-    serverApi := SpigotApi
+    name := "spigot"
     // You'll need to install the spigot jar to run the server through sbt. See here: https://github.com/aki-ks/sbt-bukkit/wiki/Start-Bukkit-Server
     // spigotJar := "/home/user/Downloads/spigot-1.14.4.jar"
   )
 
+Bukkit / serverVersion := "1.14.4-R0.1-SNAPSHOT"
+Bukkit / serverApi := SpigotApi
 Bukkit / pluginName := "ProofointersPlugin"
 Bukkit / pluginVersion := "1.0"
 Bukkit / pluginDescription := "An example plugin configuration"
