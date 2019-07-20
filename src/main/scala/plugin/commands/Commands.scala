@@ -2,7 +2,7 @@ package plugin.commands
 
 import org.bukkit.command.{Command, CommandExecutor, CommandSender}
 
-class Commands extends CommandExecutor {
+final class Commands extends CommandExecutor {
 
     def onCommand(sender: CommandSender, command: Command, label: String, args: Array[String]): Boolean = {
         val argsString = args.mkString(", ")

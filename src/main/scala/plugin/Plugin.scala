@@ -1,6 +1,6 @@
 package plugin
 
-import commands.Commands
+import commands.{Commands, PartyCommands}
 import listeners.PlayerListener
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,9 +13,10 @@ final class Main extends JavaPlugin {
         logger.info("Plugin has been enabled!")
         getServer.getPluginManager.registerEvents(new PlayerListener(logger), this)
         getCommand("hello").setExecutor(new Commands)
+        getCommand("party").setExecutor(new PartyCommands)
     }
 
     override def onDisable(): Unit = {
-        getLogger.info("Plugin has been disabled!")
+        logger.info("Plugin has been disabled!")
     }
 }

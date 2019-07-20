@@ -6,7 +6,9 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .enablePlugins(BukkitPlugin)
   .settings(
-    name := "spigot"
+    name := "spigot",
+    libraryDependencies += "com.sk89q.worldedit" % "worldedit-bukkit" % "7.0.0",
+    resolvers += "Engine Hub" at "https://maven.enginehub.org/repo"
   )
 
 Bukkit / serverVersion := "1.14.4-R0.1-SNAPSHOT"
@@ -34,6 +36,9 @@ Bukkit / pluginCommands += { /hello }
   .description("Just saying hey.")
   .usage("/hello")
 
+// Names of other plugins required to initialize your plugin
+Bukkit / pluginDependencies += "WorldEdit"
+
 // Commands registered by your plugin
 // Bukkit / pluginCommands += { /gm }
 //   .alias(/gmode, /cgm)
@@ -46,9 +51,6 @@ Bukkit / pluginCommands += { /hello }
 //   .default
 //   .description("Change your gamemode")
 //   .children("example.gamemode.others" -> true)
-
-// Names of other plugins required to initialize your plugin
-// Bukkit / pluginDependencies += "WorldEdit"
 
 // Your plugin must be loaded before these plugins
 // Bukkit / pluginLoadBefore += "WorldGuard"
